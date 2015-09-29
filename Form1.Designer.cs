@@ -37,6 +37,7 @@
             this.klippUtToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.klistraInToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.hjälpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.explorerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.buttonTwo = new System.Windows.Forms.Button();
             this.buttonFour = new System.Windows.Forms.Button();
             this.buttonFive = new System.Windows.Forms.Button();
@@ -55,7 +56,6 @@
             this.labelCurrentOperation = new System.Windows.Forms.Label();
             this.buttonClearEntry = new System.Windows.Forms.Button();
             this.buttonThree = new System.Windows.Forms.Button();
-            this.explorerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -96,14 +96,16 @@
             this.menyToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.avslutaProgrammetToolStripMenuItem});
             this.menyToolStripMenuItem.Name = "menyToolStripMenuItem";
-            this.menyToolStripMenuItem.Size = new System.Drawing.Size(45, 20);
-            this.menyToolStripMenuItem.Text = "Meny";
+            this.menyToolStripMenuItem.Size = new System.Drawing.Size(43, 20);
+            this.menyToolStripMenuItem.Text = "Arkiv";
+            this.menyToolStripMenuItem.Click += new System.EventHandler(this.menyToolStripMenuItem_Click);
             // 
             // avslutaProgrammetToolStripMenuItem
             // 
             this.avslutaProgrammetToolStripMenuItem.Name = "avslutaProgrammetToolStripMenuItem";
             this.avslutaProgrammetToolStripMenuItem.Size = new System.Drawing.Size(171, 22);
             this.avslutaProgrammetToolStripMenuItem.Text = "Avsluta programmet";
+            this.avslutaProgrammetToolStripMenuItem.Click += new System.EventHandler(this.avslutaProgrammetToolStripMenuItem_Click);
             // 
             // redigeraToolStripMenuItem
             // 
@@ -133,6 +135,13 @@
             this.hjälpToolStripMenuItem.Name = "hjälpToolStripMenuItem";
             this.hjälpToolStripMenuItem.Size = new System.Drawing.Size(43, 20);
             this.hjälpToolStripMenuItem.Text = "Hjälp";
+            // 
+            // explorerToolStripMenuItem
+            // 
+            this.explorerToolStripMenuItem.Name = "explorerToolStripMenuItem";
+            this.explorerToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.explorerToolStripMenuItem.Text = "Utforskare";
+            this.explorerToolStripMenuItem.Click += new System.EventHandler(this.explorerToolStripMenuItem_Click);
             // 
             // buttonTwo
             // 
@@ -331,12 +340,6 @@
             this.buttonThree.Text = "3";
             this.buttonThree.UseVisualStyleBackColor = false;
             this.buttonThree.Click += new System.EventHandler(this.button_click);
-            // 
-            // explorerToolStripMenuItem
-            // 
-            this.explorerToolStripMenuItem.Name = "explorerToolStripMenuItem";
-            this.explorerToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.explorerToolStripMenuItem.Text = "Explorer";
             // 
             // Form1
             // 

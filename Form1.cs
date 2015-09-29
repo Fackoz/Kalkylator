@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Speech.Synthesis;
 
 namespace WindowsFormsApplication1
 {
@@ -26,8 +27,10 @@ namespace WindowsFormsApplication1
             if ((textBox_result.Text == "0") || (isOperationPerformed))
                 textBox_result.Clear();
 
-            isOperationPerformed = false;
+            SpeechSynthesizer speech = new SpeechSynthesizer();
             Button button = (Button)sender;
+            speech.SpeakAsync(button.Text);
+            isOperationPerformed = false;
             if (button.Text == ",")
             {
                 if (!textBox_result.Text.Contains(","))
@@ -39,7 +42,8 @@ namespace WindowsFormsApplication1
         private void operator_click(object sender, EventArgs e)
         {
             Button button = (Button)sender;
-
+            SpeechSynthesizer speech = new SpeechSynthesizer();
+            speech.SpeakAsync(button.Text);
             if (resultValue != 0)
             {
                 buttonEquals.PerformClick();
@@ -88,11 +92,30 @@ namespace WindowsFormsApplication1
             }
             resultValue = Double.Parse(textBox_result.Text);
             labelCurrentOperation.Text = "";
+            SpeechSynthesizer speech = new SpeechSynthesizer();
+            Button button = (Button)sender;
+            speech.SpeakAsync(button.Text);
+            speech.SpeakAsync(resultValue.ToString());
+        }
+
+        private void avslutaProgrammetToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
 
         private void Form1_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void menyToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void explorerToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            System.Diagnostics.Process.Start("notepad.exe");
         }
 
     }
